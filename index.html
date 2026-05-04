@@ -614,7 +614,7 @@ footer {
   flex-wrap: wrap; gap: 12px;
 }
 .footer-bottom p { font-size: 12px; color: var(--muted); font-family: var(--mono); }
-.footer-legal { display: flex; gap: 20px; }
+.footer-legal { display: flex; gap: 20px; flex-wrap: wrap; }
 .footer-legal a { font-size: 12px; color: var(--muted); text-decoration: none; font-family: var(--mono); }
 .footer-legal a:hover { color: var(--text); }
 
@@ -1050,22 +1050,6 @@ footer {
       </div>
       <div class="pricing-limited-grid">
 
-        <div class="price-card">
-          <div class="price-badge" style="background:var(--green-dim);color:var(--green);border-color:oklch(0.76 0.16 148 / 0.3);">15 Seats</div>
-          <p class="price-tier">Early Adopter Quarterly</p>
-          <div class="price-amount" style="font-size:38px;"><sup style="font-size:18px;margin-top:8px;">$</sup>199</div>
-          <p class="price-period">per 3 months &nbsp;·&nbsp; <span style="color:var(--green)">~$66/mo</span></p>
-          <p style="font-size:12px;color:var(--muted);font-family:var(--mono);margin-bottom:16px;">Flexible quarterly commitment</p>
-          <ul class="price-features">
-            <li>Full IOTSIM access</li>
-            <li>Insight Monitor — all 6 pages</li>
-            <li>14-day free trial</li>
-            <li>Cancel at quarter end</li>
-            <li class="na">Annual savings</li>
-          </ul>
-          <a href="https://whop.com/iotsim-algo/insight-monitor" class="btn btn-outline" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Get Early Adopter Quarterly ↗</a>
-        </div>
-
         <div class="price-card featured" style="position:relative;">
           <div class="price-badge">🔒 10 Seats</div>
           <p class="price-tier">Founding Annual</p>
@@ -1096,6 +1080,22 @@ footer {
             <li class="na">Founding rate lock</li>
           </ul>
           <a href="https://whop.com/iotsim-algo/insight-monitor" class="btn btn-outline" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Get Early Adopter Annual ↗</a>
+        </div>
+
+        <div class="price-card">
+          <div class="price-badge" style="background:var(--green-dim);color:var(--green);border-color:oklch(0.76 0.16 148 / 0.3);">15 Seats</div>
+          <p class="price-tier">Early Adopter Quarterly</p>
+          <div class="price-amount" style="font-size:38px;"><sup style="font-size:18px;margin-top:8px;">$</sup>199</div>
+          <p class="price-period">per 3 months &nbsp;·&nbsp; <span style="color:var(--green)">~$66/mo</span></p>
+          <p style="font-size:12px;color:var(--muted);font-family:var(--mono);margin-bottom:16px;">Flexible quarterly commitment</p>
+          <ul class="price-features">
+            <li>Full IOTSIM access</li>
+            <li>Insight Monitor — all 6 pages</li>
+            <li>14-day free trial</li>
+            <li>Cancel at quarter end</li>
+            <li class="na">Annual savings</li>
+          </ul>
+          <a href="https://whop.com/iotsim-algo/insight-monitor" class="btn btn-outline" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Get Early Adopter Quarterly ↗</a>
         </div>
 
       </div>
@@ -1191,15 +1191,19 @@ footer {
           <li><a href="terms.html">Terms &amp; Conditions</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="disclaimer.html">Risk Disclaimer</a></li>
+          <li><a href="eula.html">EULA</a></li>
+          <li><a href="returns.html">Return &amp; Refund Policy</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 IOTSIM / Reggie_W — iotsimalgo.com</p>
+      <p>© 2026 Reggie_W, trading as IOTSIM — iotsimalgo.com</p>
       <div class="footer-legal">
         <a href="terms.html">Terms</a>
         <a href="privacy.html">Privacy</a>
         <a href="disclaimer.html">Disclaimer</a>
+        <a href="eula.html">EULA</a>
+        <a href="returns.html">Returns</a>
       </div>
     </div>
   </div>
@@ -1235,8 +1239,8 @@ footer {
 /* ─── TWEAKS PROTOCOL ── */
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "whopUrl": "https://whop.com/iotsim-algo/insight-monitor",
-  "priceBasic": "$199",
-  "pricePro": "$299",
+  "priceBasic": "$299",
+  "pricePro": "$399",
   "labelBasic": "Founding Annual",
   "labelPro": "Early Adopter Annual"
 }/*EDITMODE-END*/;
