@@ -3,79 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Conditions — IOTSIM</title>
+<title>Terms &amp; Conditions — IOTSIM</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#050a0f; --bg2:#0a1219; --bg3:#0f1a25; --card:#111e2c;
-  --border:rgba(255,255,255,0.07); --text:#dce8f0; --muted:#6a8499;
-  --cyan:oklch(0.76 0.17 200); --font:'Space Grotesk',sans-serif; --mono:'Space Mono',monospace;
-}
+:root{--bg:#050a0f;--bg2:#0a1219;--card:#111e2c;--border:rgba(255,255,255,0.07);--text:#dce8f0;--muted:#6a8499;--cyan:oklch(0.76 0.17 200);--red:oklch(0.72 0.17 25);--font:'Space Grotesk',sans-serif;--mono:'Space Mono',monospace;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
-a{color:var(--cyan);text-decoration:none;}
-a:hover{text-decoration:underline;}
-
-nav{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:16px 32px;background:rgba(5,10,15,0.9);
-  border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;
-  backdrop-filter:blur(16px);
-}
+a{color:var(--cyan);text-decoration:none;}a:hover{text-decoration:underline;}
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;background:rgba(5,10,15,0.9);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;backdrop-filter:blur(16px);}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .nav-logo img{height:28px;}
 .nav-logo span{font-size:17px;font-weight:700;color:#fff;}
 .nav-back{font-size:13px;color:var(--muted);font-family:var(--mono);}
 .nav-back:hover{color:var(--text);}
-
 .legal-wrap{max-width:760px;margin:0 auto;padding:64px 24px 100px;}
-
 .legal-header{margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border);}
-.legal-tag{
-  display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;
-  text-transform:uppercase;font-family:var(--mono);padding:4px 12px;
-  border-radius:20px;border:1px solid oklch(0.76 0.17 200 / 0.4);
-  color:var(--cyan);background:oklch(0.76 0.17 200 / 0.08);margin-bottom:20px;
-}
+.legal-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-family:var(--mono);padding:4px 12px;border-radius:20px;border:1px solid oklch(0.76 0.17 200 / 0.4);color:var(--cyan);background:oklch(0.76 0.17 200 / 0.08);margin-bottom:20px;}
 .legal-header h1{font-size:clamp(28px,4vw,40px);font-weight:700;color:#fff;margin-bottom:12px;}
 .legal-header .meta{font-size:13px;color:var(--muted);font-family:var(--mono);}
-
-.legal-body h2{
-  font-size:18px;font-weight:700;color:#fff;
-  margin:40px 0 14px;padding-top:40px;
-  border-top:1px solid var(--border);
-}
+.legal-body h2{font-size:18px;font-weight:700;color:#fff;margin:40px 0 14px;padding-top:40px;border-top:1px solid var(--border);}
 .legal-body h2:first-child{border-top:none;padding-top:0;}
+.legal-body h3{font-size:15px;font-weight:700;color:#fff;margin:24px 0 10px;font-family:var(--mono);letter-spacing:0.02em;}
 .legal-body p{color:var(--muted);margin-bottom:14px;font-size:15px;}
 .legal-body p strong{color:var(--text);}
 .legal-body ul{list-style:none;margin:0 0 14px;display:flex;flex-direction:column;gap:8px;}
-.legal-body ul li{
-  font-size:15px;color:var(--muted);padding-left:20px;position:relative;
-}
+.legal-body ul li{font-size:15px;color:var(--muted);padding-left:20px;position:relative;}
 .legal-body ul li::before{content:'—';position:absolute;left:0;color:var(--cyan);font-size:12px;}
-
-.highlight-block{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:10px;padding:20px 24px;margin:20px 0;
-}
-.highlight-block.warn{border-color:oklch(0.72 0.17 25 / 0.35);}
-.highlight-block p{margin:0;font-size:14px;}
-
-.placeholder{
-  background:oklch(0.85 0.18 55 / 0.08);
-  border:1px dashed oklch(0.85 0.18 55 / 0.4);
-  border-radius:6px;padding:2px 8px;
-  color:oklch(0.85 0.18 55);font-family:var(--mono);font-size:13px;
-}
-
-footer{
-  background:var(--bg2);border-top:1px solid var(--border);
-  padding:28px 32px;display:flex;justify-content:space-between;
-  align-items:center;flex-wrap:wrap;gap:12px;
-}
+.legal-body ol{list-style:none;margin:0 0 14px;display:flex;flex-direction:column;gap:10px;counter-reset:olcount;padding-left:0;}
+.legal-body ol li{font-size:15px;color:var(--muted);padding-left:32px;position:relative;counter-increment:olcount;}
+.legal-body ol li::before{content:'(' counter(olcount, lower-roman) ')';position:absolute;left:0;color:var(--cyan);font-family:var(--mono);font-size:13px;top:1px;}
+.warn-box{background:oklch(0.72 0.17 25 / 0.07);border:1px solid oklch(0.72 0.17 25 / 0.35);border-radius:12px;padding:24px 28px;margin:24px 0;}
+.warn-box .warn-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.warn-box .warn-icon{font-size:20px;}
+.warn-box .warn-title{font-size:13px;font-weight:700;font-family:var(--mono);letter-spacing:0.08em;text-transform:uppercase;color:var(--red);}
+.warn-box p{color:var(--muted);font-size:15px;margin:0;}
+.warn-box p + p{margin-top:10px;}
+.warn-box ul{margin-top:10px;}
+.warn-box ul li::before{color:var(--red);}
+.neutral-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin:24px 0;}
+.neutral-box p{color:var(--muted);font-size:14px;margin:0;}
+.neutral-box p + p{margin-top:10px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin:0 0 40px;}
+.toc-title{font-size:11px;font-weight:700;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.toc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 24px;}
+.toc-list a{font-size:13px;color:var(--muted);font-family:var(--mono);}
+.toc-list a:hover{color:var(--cyan);text-decoration:none;}
+.toc-list a span{color:var(--cyan);margin-right:6px;}
+@media (max-width:600px){.toc-list{grid-template-columns:1fr;}}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 footer p{font-size:12px;color:var(--muted);font-family:var(--mono);}
-.footer-legal{display:flex;gap:20px;}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap;}
 .footer-legal a{font-size:12px;color:var(--muted);text-decoration:none;font-family:var(--mono);}
 .footer-legal a:hover{color:var(--text);}
 </style>
@@ -94,80 +72,214 @@ footer p{font-size:12px;color:var(--muted);font-family:var(--mono);}
   <div class="legal-header">
     <span class="legal-tag">Legal</span>
     <h1>Terms &amp; Conditions</h1>
-    <p class="meta">Last updated: April 2026 &nbsp;·&nbsp; Effective for all subscriptions from April 2026</p>
+    <p class="meta">Last updated: May 2026 &nbsp;·&nbsp; Effective for all subscriptions from May 2026</p>
   </div>
 
   <div class="legal-body">
 
-    <h2>1. Agreement to Terms</h2>
-    <p>By accessing or subscribing to IOTSIM ("the Product"), operated by IOTSIM ("we", "us", "our") via iotsimalgo.com and/or Whop.com, you agree to be bound by these Terms &amp; Conditions. If you do not agree, do not use the Product.</p>
-
-    <h2>2. What IOTSIM Is</h2>
-    <p>IOTSIM (Infinite Outcome Trade Simulator + Insight Monitor) is a <strong>research and analysis tool</strong> published as a TradingView indicator. It simulates hypothetical trade outcomes based on user-defined configurations and historical price data.</p>
-    <div class="highlight-block warn">
-      <p><strong>IOTSIM is not a financial advisory service, signal service, or investment product.</strong> It does not provide buy or sell recommendations. All outputs are simulated and historical in nature.</p>
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <div class="toc-list">
+        <a href="#s1"><span>01</span>Agreement to Terms</a>
+        <a href="#s2"><span>02</span>What IOTSIM Is</a>
+        <a href="#s3"><span>03</span>Subscription &amp; Billing</a>
+        <a href="#s4"><span>04</span>Access &amp; Licence</a>
+        <a href="#s5"><span>05</span>Acceptable Use</a>
+        <a href="#s6"><span>06</span>No Financial Advice</a>
+        <a href="#s6a"><span>6a</span>Alerts &amp; User Responsibility</a>
+        <a href="#s6b"><span>6b</span>Personal Automation</a>
+        <a href="#s7"><span>07</span>Intellectual Property</a>
+        <a href="#s8"><span>08</span>Disclaimers &amp; Liability</a>
+        <a href="#s9"><span>09</span>Subscriber Warranties</a>
+        <a href="#s10"><span>10</span>Indemnity</a>
+        <a href="#s11"><span>11</span>Changes</a>
+        <a href="#s12"><span>12</span>Suspension &amp; Termination</a>
+        <a href="#s13"><span>13</span>Risk Acknowledgement</a>
+        <a href="#s14"><span>14</span>Governing Law</a>
+        <a href="#s15"><span>15</span>General</a>
+        <a href="#s16"><span>16</span>Contact</a>
+      </div>
     </div>
 
-    <h2>3. Subscription &amp; Billing</h2>
-    <p>Subscriptions are managed through Whop.com. By subscribing you agree to Whop's Terms of Service in addition to these terms. Billing occurs according to the plan selected at checkout (monthly, quarterly, or annual).</p>
+    <h2 id="s1">1. Agreement to Terms</h2>
+    <p>By accessing or subscribing to IOTSIM ("the Product"), operated by <strong>Reggie_W trading as IOTSIM</strong> ("we", "us", "our") via iotsimalgo.com and/or Whop.com, you agree to be bound by these Terms &amp; Conditions. If you do not agree to any part of these Terms, you must not access, subscribe to, or otherwise use the Product.</p>
+    <p>These Terms apply to every plan, every edition, and every user, including users on free trials.</p>
+
+    <h2 id="s2">2. What IOTSIM Is</h2>
+    <p>IOTSIM (Infinite Outcome Trade Simulator + Insight Monitor — including the ICT Edition, "IOTSIMICT") is a <strong>research, analysis, and self-configured monitoring tool</strong> published as a TradingView indicator. It allows the user to define their own technical criteria — including but not limited to fair value gaps, order blocks, liquidity levels, volume imbalances, session windows, risk parameters, and entry/exit logic — and then:</p>
     <ul>
-      <li>All prices are displayed in USD unless otherwise stated</li>
-      <li>Founding Annual rates are locked for the life of the subscription provided payment remains continuous</li>
-      <li>Limited-seat plans (Founding Annual, Early Adopter Annual, Early Adopter Quarterly) are subject to availability</li>
-      <li>A 14-day free trial is available on all plans. No charge is made during the trial period</li>
-      <li>You may cancel at any time via your Whop dashboard. Cancellation takes effect at the end of the current billing period</li>
-      <li>We do not offer refunds for partial billing periods, except where required by applicable law</li>
+      <li>simulates hypothetical trade outcomes against historical price data based on those user-defined configurations; and</li>
+      <li>monitors live price action on the user's chosen chart and notifies the user, via TradingView's native alert system, when conditions matching the user's own configuration occur.</li>
+    </ul>
+    <div class="warn-box">
+      <div class="warn-head">
+        <span class="warn-icon">⚠️</span>
+        <span class="warn-title">Not a Financial Service</span>
+      </div>
+      <p><strong style="color:#fff;">IOTSIM is not a financial advisory service, signal service, copy-trading service, managed-account service, or investment product.</strong> It does not generate, transmit, or recommend trades. It does not tell the user what to buy or sell, when to enter or exit a position, or how to manage capital. Every output — whether historical, simulated, or live — is the deterministic result of inputs the user has selected. The Product is a calculator and a monitor; the user is the analyst.</p>
+    </div>
+    <p>We are not registered as financial advisors, broker-dealers, investment managers, or any equivalent regulated entity in any jurisdiction, and nothing in the Product or its associated materials should be construed as the provision of a regulated financial service.</p>
+
+    <h2 id="s3">3. Subscription &amp; Billing</h2>
+    <p>Subscriptions are managed through Whop.com. By subscribing you agree to Whop's Terms of Service in addition to these Terms. Billing occurs according to the plan selected at checkout (monthly, quarterly, or annual).</p>
+    <ul>
+      <li>All prices are displayed in USD unless otherwise stated.</li>
+      <li>Founding Annual rates are locked for the life of the subscription provided payment remains continuous; any lapse in payment forfeits the locked rate.</li>
+      <li>Limited-seat plans (Founding Annual, Early Adopter Annual, Early Adopter Quarterly) are subject to availability and may be withdrawn without notice once seats are filled.</li>
+      <li>A 14-day free trial is available on plans where it is offered at checkout. Where a trial is offered, no charge is made during the trial period. Trial availability is set per-plan on Whop and may differ between plans; the checkout page is the authoritative source.</li>
+      <li>You may cancel at any time via your Whop dashboard. Cancellation takes effect at the end of the current billing period.</li>
+      <li>We do not offer refunds for partial billing periods, except where required by applicable law (including, for UK and EU consumers, any non-excludable statutory rights).</li>
     </ul>
 
-    <h2>4. Access &amp; Licence</h2>
-    <p>Upon active subscription, you are granted a personal, non-transferable, non-exclusive licence to access and use IOTSIM on TradingView for your own private research purposes. This licence is revoked upon cancellation or non-payment.</p>
+    <h2 id="s4">4. Access &amp; Licence</h2>
+    <p>Upon active subscription, you are granted a personal, non-transferable, non-exclusive, revocable licence to access and use IOTSIM on TradingView for your own private research and personal trading purposes only. This licence is automatically revoked upon cancellation, non-payment, breach of these Terms, or termination by us under Section 12.</p>
     <ul>
-      <li>You may not share, resell, sublicence, or redistribute access to the Product</li>
-      <li>You may not reverse-engineer, copy, or replicate the indicator's Pine Script source code</li>
-      <li>One TradingView account per subscription</li>
+      <li>You may not share, resell, sublicence, redistribute, lease, or otherwise make access to the Product available to any third party.</li>
+      <li>You may not reverse-engineer, decompile, copy, replicate, mirror, or create derivative works from the Product or its Pine Script source code, except to the extent such restriction is prohibited by applicable law.</li>
+      <li>One TradingView account per subscription. Use of a single subscription across multiple TradingView accounts is a material breach of these Terms.</li>
+      <li>You may not use the Product, or any output of the Product, to train, fine-tune, evaluate, or benchmark any machine-learning model, large language model, or competing analytical product without our prior written consent.</li>
     </ul>
 
-    <h2>5. Acceptable Use</h2>
+    <h2 id="s5">5. Acceptable Use</h2>
     <p>You agree to use IOTSIM solely for lawful purposes and in accordance with these Terms. You must not:</p>
     <ul>
-      <li>Use the Product to engage in market manipulation or any unlawful trading activity</li>
-      <li>Share your subscription credentials with third parties</li>
-      <li>Misrepresent IOTSIM outputs as live trading signals or guaranteed results</li>
-      <li>Publish or distribute screenshots of proprietary indicator code or unreleased features</li>
+      <li>Use the Product to engage in market manipulation, insider trading, wash trading, spoofing, layering, or any other unlawful trading activity in any jurisdiction.</li>
+      <li>Share, lend, lease, sell, or otherwise transfer your subscription credentials, TradingView invite, or access entitlement to any third party.</li>
+      <li>Represent, market, redistribute, resell, advertise, promote, or hold out IOTSIM outputs (including alerts, simulated results, statistical summaries, screenshots, or recordings thereof) as trading signals, investment recommendations, managed-account services, signal-provider services, copy-trading offerings, or guaranteed results, whether to the public, to followers, to clients, or to any third party, whether for a fee or free of charge.</li>
+      <li>Operate or assist in operating any service — including but not limited to Discord groups, Telegram channels, paid newsletters, signal rooms, "VIP" channels, mentorship programmes, or social-media offerings — that derives its value, in whole or in part, from rebroadcasting, mirroring, paraphrasing, or otherwise communicating IOTSIM outputs to other persons.</li>
+      <li>Connect IOTSIM alerts to webhooks, broker APIs, copy-trading platforms, or automated execution systems in any manner that exposes those alerts, or any action taken on them, to any person other than yourself. Personal automation for your own private account, on your own broker, in compliance with your broker's terms and your local laws, is permitted; redistribution is not.</li>
+      <li>Publish or distribute screenshots, recordings, or transcripts of proprietary indicator code, internal data structures, debug output, or unreleased features.</li>
+      <li>Use the Product in any jurisdiction, or in any manner, where doing so would breach local laws, financial-services regulation, securities law, derivatives regulation, broker terms of service, or exchange rules.</li>
     </ul>
-
-    <h2>6. No Financial Advice</h2>
-    <div class="highlight-block warn">
-      <p>Nothing within IOTSIM, its documentation, or any communications from us constitutes financial advice, investment advice, or a recommendation to buy, sell, or hold any financial instrument. Past simulated performance does not indicate or guarantee future results. All trading involves substantial risk of loss. You are solely responsible for your own trading decisions.</p>
+    <div class="warn-box">
+      <div class="warn-head">
+        <span class="warn-icon">⛔</span>
+        <span class="warn-title">Enforcement</span>
+      </div>
+      <p>Breach of any provision of this Section 5 is a material breach of these Terms and authorises us, at our sole discretion and without prior notice, to:</p>
+      <ol>
+        <li>immediately suspend or terminate your subscription and revoke your licence under Section 4 without refund;</li>
+        <li>report the breach, with all associated account and usage information, to TradingView, Whop, your broker, the relevant exchange, and any competent regulatory or law-enforcement authority in any applicable jurisdiction (including, in England &amp; Wales, the Financial Conduct Authority and Action Fraud);</li>
+        <li>pursue civil remedies, including injunctive relief, damages, account of profits, and recovery of legal costs and investigative expenses on an indemnity basis; and</li>
+        <li>cooperate with any criminal investigation or prosecution arising from the breach as required by law.</li>
+      </ol>
+      <p>The remedies in this Section are cumulative and in addition to any other rights or remedies available to us at law or in equity.</p>
     </div>
 
-    <h2>7. Intellectual Property</h2>
-    <p>All content, code, design, and documentation associated with IOTSIM — including but not limited to the Pine Script indicator, Insight Monitor, documentation sites, and branding — is the intellectual property of IOTSIM and is protected by applicable copyright and intellectual property laws.</p>
+    <h2 id="s6">6. No Financial Advice</h2>
+    <p>Nothing within IOTSIM, its documentation, its alerts, its simulated outputs, its marketing materials, or any communication from us — including emails, social-media posts, support replies, tutorial content, and community channels — constitutes financial advice, investment advice, tax advice, legal advice, a solicitation, an offer, or a recommendation to buy, sell, or hold any financial instrument, derivative, security, commodity, currency, cryptocurrency, or other asset.</p>
+    <p>Past simulated performance does not indicate or guarantee future results. Hypothetical and simulated results have inherent limitations, including but not limited to the benefit of hindsight, the absence of real execution costs, slippage, and liquidity constraints, and the fact that no simulation can fully account for the financial and psychological pressures of live trading. All trading involves substantial risk of loss, including total loss of capital, and in leveraged products may result in losses exceeding deposited capital.</p>
+    <p><strong>You are solely responsible for your own trading decisions, your own risk management, your own tax reporting, and any outcomes — financial, legal, or otherwise — arising from them.</strong></p>
 
-    <h2>8. Disclaimers &amp; Limitation of Liability</h2>
-    <p>The Product is provided "as is" and "as available" without warranty of any kind. We do not guarantee uninterrupted access, accuracy of simulated results, or fitness for any particular trading strategy.</p>
-    <p>To the maximum extent permitted by applicable law, our total liability to you for any claim arising from use of the Product shall not exceed the total subscription fees paid by you in the three months preceding the claim.</p>
+    <h2 id="s6a">6a. Alerts, Configuration, and User Responsibility</h2>
+    <p>IOTSIM's alert and detection features exist solely to notify you when price action on your chart aligns with technical criteria <strong>you have configured yourself</strong> through the indicator's input settings. You acknowledge and agree that:</p>
+    <ul>
+      <li>Every alert fired by IOTSIM is the direct, deterministic result of input parameters selected by you. We do not select these parameters on your behalf, and we do not curate, filter, override, vet, endorse, or take any view on the conditions under which alerts fire.</li>
+      <li>An alert is a notification that <em>your</em> criteria have been met on the chart. It is not a recommendation, instruction, signal, prediction, or suggestion from IOTSIM, its operator, or any associated party that you should take any action — including entering, exiting, sizing, hedging, or managing a trade.</li>
+      <li>Default input values, example configurations, tutorial content, marketing material, screenshots, and documentation are provided for <strong>illustrative and educational purposes only</strong>. They are not recommended settings, optimal settings, or settings we suggest you trade. Any decision to retain, modify, or act upon a default or example configuration is your decision alone.</li>
+      <li>The labels used within the Product — including but not limited to "Entry," "Stop Loss," "Take Profit," "TP1 Hit," "TSL Update," "Detected," "Setup," "Trade," "Long," and "Short" — are technical descriptors referring to points and states within a user-defined simulation model. They do not constitute instructions to enter, exit, or manage any position in a live market.</li>
+      <li>You are solely responsible for understanding the technical concepts underlying your chosen configuration, for testing it on appropriate timeframes and instruments, for assessing its suitability for your circumstances, and for any action you take (or do not take) in response to an alert.</li>
+      <li>You will not rely on IOTSIM as your sole basis for any trading decision, and you will conduct your own independent research and, where appropriate, seek advice from a qualified, regulated financial professional in your jurisdiction.</li>
+    </ul>
+    <p>By subscribing to and using IOTSIM, you affirm that you understand the Product is a self-directed analytical and monitoring tool, that all configurations and resulting outputs are an extension of your own analysis, and that full responsibility for any trading activity undertaken by you — whether informed by IOTSIM or otherwise — rests entirely with you.</p>
 
-    <h2>9. Changes to the Product</h2>
-    <p>We reserve the right to modify, update, or discontinue any feature of IOTSIM at any time. We will endeavour to give reasonable notice of significant changes via email or Whop dashboard notifications.</p>
+    <h2 id="s6b">6b. Personal Automation</h2>
+    <p>Connecting IOTSIM alerts to automated execution systems for your own personal trading account is permitted, provided that <strong>all</strong> of the following conditions are met at all times:</p>
+    <ul>
+      <li>The automation operates exclusively on accounts beneficially owned by you, in your own name.</li>
+      <li>Operation of the automation complies in full with the terms of service, API terms, and acceptable-use policies of your broker, exchange, and any intermediary platform (including, where applicable, TradingView).</li>
+      <li>Operation of the automation complies in full with all laws and regulations applicable to you, including securities law, derivatives regulation, anti-money-laundering rules, and tax law in your jurisdiction of residence and any jurisdiction in which you trade.</li>
+      <li>No alert, output, or derivative thereof is exposed, transmitted, mirrored, rebroadcast, or made available to any other person at any point in the automation chain.</li>
+      <li>You assume full and exclusive responsibility for any execution, mis-execution, slippage, downtime, malformed order, runaway behaviour, or financial loss arising from the automation, irrespective of cause.</li>
+    </ul>
+    <p>We provide no warranty, support, or guarantee regarding the suitability of IOTSIM alerts for automated execution. Latency, missed bars, repainting on unconfirmed bars, TradingView platform behaviour, broker API behaviour, and network conditions are outside our control. <strong>You automate at your own risk.</strong></p>
 
-    <h2>10. Governing Law</h2>
-    <p>These Terms are governed by and construed in accordance with the laws of England &amp; Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England &amp; Wales. These Terms apply regardless of your country of residence; by subscribing you agree to this governing law.</p>
+    <h2 id="s7">7. Intellectual Property</h2>
+    <p>All content, code, design, and documentation associated with IOTSIM — including but not limited to the Pine Script indicator (in all editions, including IOTSIMICT), the Insight Monitor, the simulation engine, output formats, alert templates, documentation sites, marketing materials, and branding — is the intellectual property of Reggie_W, trading as IOTSIM, and is protected by applicable copyright, database-right, trade-mark, and other intellectual-property laws of England &amp; Wales and other relevant jurisdictions.</p>
+    <p>No rights are granted to you save for the limited licence expressly set out in Section 4. All other rights are reserved. Use of any IOTSIM trade-mark, logo, or branding — in marketing, signal services, social media, video content, paid courses, mentorship offerings, or any commercial context — without our prior written consent is prohibited.</p>
 
-    <h2>11. Contact</h2>
+    <h2 id="s8">8. Disclaimers &amp; Limitation of Liability</h2>
+    <p>The Product is provided <strong>"as is" and "as available" without warranty of any kind</strong>, whether express, implied, statutory, or otherwise, including without limitation any implied warranties of merchantability, fitness for a particular purpose, accuracy, non-infringement, or uninterrupted operation. We do not guarantee uninterrupted access, accuracy of simulated results, freedom from defects, freedom from repainting on unconfirmed bars, fitness for any particular trading strategy, compatibility with any broker, or compliance with the rules of any exchange.</p>
+    <p>To the maximum extent permitted by applicable law:</p>
+    <ul>
+      <li>we shall not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, including lost profits, lost trading opportunities, lost data, business interruption, regulatory penalties, or reputational harm, arising from or related to your use of the Product, even if we have been advised of the possibility of such damages; and</li>
+      <li>our total aggregate liability to you for any and all claims arising from or related to the Product, whether in contract, tort (including negligence), statute, or otherwise, shall not exceed the total subscription fees actually paid by you to us in the three (3) months immediately preceding the event giving rise to the claim.</li>
+    </ul>
+    <h3>Statutory Rights</h3>
+    <p>Nothing in these Terms excludes or limits our liability for: (i) death or personal injury caused by our negligence; (ii) fraud or fraudulent misrepresentation; or (iii) any other liability that cannot be excluded or limited under the laws of England &amp; Wales. Where you are a consumer ordinarily resident in the United Kingdom, nothing in these Terms affects your non-excludable statutory rights, including those under the Consumer Rights Act 2015. Where you are a consumer ordinarily resident in the European Economic Area, nothing in these Terms affects your non-excludable rights under applicable national consumer-protection law.</p>
+
+    <h2 id="s9">9. Subscriber Warranties &amp; Status</h2>
+    <p>By subscribing to IOTSIM, you represent and warrant on a continuing basis that:</p>
+    <ul>
+      <li>You are at least 18 years of age, or the age of majority in your jurisdiction of residence, whichever is greater.</li>
+      <li>You have full legal capacity to enter into these Terms.</li>
+      <li>You are subscribing in your personal capacity, as a self-directed retail user, for your own private research and personal trading purposes only, and not in the course of providing any regulated financial service to clients or third parties.</li>
+      <li>You are not a person against whom sanctions have been imposed by the United Kingdom, the European Union, the United States, or the United Nations, and you are not resident in a jurisdiction subject to comprehensive sanctions.</li>
+      <li>If you are an FCA-authorised firm, an EU-authorised investment firm, a US-registered investment adviser, broker-dealer, or commodity trading advisor, or hold any equivalent authorisation in any other jurisdiction — or if you are an employee, contractor, or representative of such a firm acting in that capacity — you will not use IOTSIM, or any output of IOTSIM, in connection with the provision of regulated services to your own clients, customers, or members. Any such use is a material breach of these Terms and is expressly prohibited.</li>
+      <li>You will not use IOTSIM in any way that would cause us, even inadvertently, to be characterised as a sub-provider, sub-adviser, technology provider, or component of any regulated financial service offered by you or any third party.</li>
+    </ul>
+
+    <h2 id="s10">10. Indemnity</h2>
+    <p>You agree to indemnify, defend, and hold harmless Reggie_W, IOTSIM, and any associated affiliates, contractors, and representatives from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees on an indemnity basis) arising out of or related to:</p>
+    <ul>
+      <li>your breach of these Terms;</li>
+      <li>your use or misuse of the Product;</li>
+      <li>your trading decisions and their outcomes;</li>
+      <li>any redistribution, resale, or holding-out of IOTSIM outputs as a signal or advisory service in breach of Section 5;</li>
+      <li>any regulatory action, civil claim, or criminal investigation arising from your use of IOTSIM in the course of providing regulated services without authorisation; and</li>
+      <li>your breach of any law, regulation, or third-party right.</li>
+    </ul>
+
+    <h2 id="s11">11. Changes to the Product and to These Terms</h2>
+    <h3>Product Changes</h3>
+    <p>We reserve the right to modify, update, add to, or discontinue any feature of IOTSIM at any time, including changes to default values, alert behaviour, calculation methodology, and visual output. We will endeavour to give reasonable notice of significant changes via email, the iotsimalgo.com website, or Whop dashboard notifications.</p>
+    <h3>Terms Changes</h3>
+    <p>We reserve the right to amend these Terms from time to time. Where amendments are material, we will give reasonable notice via the channels above before the amendments take effect. Continued use of the Product after the effective date of amended Terms constitutes acceptance of the amended Terms. If you do not accept the amended Terms, your sole remedy is to cancel your subscription via your Whop dashboard before the amended Terms take effect.</p>
+
+    <h2 id="s12">12. Suspension and Termination</h2>
+    <p>We may suspend or terminate your access to the Product, with or without notice, where:</p>
+    <ul>
+      <li>you have breached these Terms, or we reasonably believe you have;</li>
+      <li>your subscription payment has lapsed;</li>
+      <li>continued provision of the Product to you would, in our reasonable opinion, expose us to legal, regulatory, reputational, or operational risk; or</li>
+      <li>we discontinue the Product or the relevant edition.</li>
+    </ul>
+    <p>Termination does not affect any rights or obligations that have accrued prior to termination. Sections 4 (final paragraph), 5, 6, 6a, 6b, 7, 8, 9, 10, 13, and 14 survive termination.</p>
+
+    <h2 id="s13">13. Risk Acknowledgement at Sign-up</h2>
+    <div class="neutral-box">
+      <p>At checkout, you will be required to affirmatively acknowledge that you have read and accept these Terms, including in particular Sections 6, 6a, 6b, 8, and 9. The recorded acknowledgement constitutes evidence of your agreement and your status as a self-directed user. Failure to complete the acknowledgement means no subscription is formed and no licence is granted.</p>
+    </div>
+
+    <h2 id="s14">14. Governing Law and Jurisdiction</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of England &amp; Wales. Any dispute, claim, or matter arising out of or in connection with these Terms or the Product shall be subject to the exclusive jurisdiction of the courts of England &amp; Wales, save that we retain the right to bring proceedings against you for breach of these Terms in any jurisdiction in which you reside or in which the breach has occurred or has effect.</p>
+    <p>These Terms apply regardless of your country of residence; by subscribing you agree to this governing law and jurisdiction. Where you are a consumer ordinarily resident in the United Kingdom or the European Economic Area, this clause does not deprive you of the protection of mandatory provisions of the law of your country of residence.</p>
+
+    <h2 id="s15">15. General</h2>
+    <ul>
+      <li><strong>Severability.</strong> If any provision of these Terms is held to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force and effect, and the invalid provision shall be modified to the minimum extent necessary to render it enforceable while preserving its intent.</li>
+      <li><strong>No waiver.</strong> No failure or delay by us to exercise any right under these Terms shall constitute a waiver of that right.</li>
+      <li><strong>Assignment.</strong> You may not assign or transfer your rights or obligations under these Terms without our prior written consent. We may assign these Terms in connection with a sale, reorganisation, or restructuring of the Product or our business.</li>
+      <li><strong>Entire agreement.</strong> These Terms, together with the Privacy Policy and Disclaimer published at iotsimalgo.com, constitute the entire agreement between you and us in respect of the Product and supersede all prior agreements, representations, and understandings.</li>
+      <li><strong>Third-party rights.</strong> A person who is not a party to these Terms has no rights under the Contracts (Rights of Third Parties) Act 1999 to enforce any term of these Terms.</li>
+      <li><strong>Notices.</strong> Notices to us must be sent to <a href="mailto:support@iotsimalgo.com">support@iotsimalgo.com</a>. Notices to you may be sent to the email address associated with your Whop account.</li>
+    </ul>
+
+    <h2 id="s16">16. Contact</h2>
     <p>For any queries regarding these Terms, please contact: <a href="mailto:support@iotsimalgo.com">support@iotsimalgo.com</a></p>
 
   </div>
 </div>
 
 <footer>
-  <p>© 2026 IOTSIM / Reggie_W — iotsimalgo.com</p>
+  <p>© 2026 Reggie_W, trading as IOTSIM — iotsimalgo.com</p>
   <div class="footer-legal">
     <a href="terms.html">Terms</a>
     <a href="privacy.html">Privacy</a>
     <a href="disclaimer.html">Disclaimer</a>
+    <a href="eula.html">EULA</a>
+    <a href="returns.html">Returns</a>
   </div>
 </footer>
-
 </body>
 </html>

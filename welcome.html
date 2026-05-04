@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to IOTSIM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050a0f;--bg2:#0a1219;--card:#111e2c;--border:rgba(255,255,255,0.07);--text:#dce8f0;--muted:#6a8499;--cyan:oklch(0.76 0.17 200);--red:oklch(0.72 0.17 25);--green:oklch(0.78 0.16 155);--font:'Space Grotesk',sans-serif;--mono:'Space Mono',monospace;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+a{color:var(--cyan);text-decoration:none;}a:hover{text-decoration:underline;}
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;background:rgba(5,10,15,0.9);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;backdrop-filter:blur(16px);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo img{height:28px;}
+.nav-logo span{font-size:17px;font-weight:700;color:#fff;}
+.nav-back{font-size:13px;color:var(--muted);font-family:var(--mono);}
+.nav-back:hover{color:var(--text);}
+.welcome-wrap{max-width:880px;margin:0 auto;padding:48px 24px 100px;}
+.hero{text-align:center;margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--border);}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-family:var(--mono);padding:6px 14px;border-radius:20px;border:1px solid oklch(0.78 0.16 155 / 0.5);color:var(--green);background:oklch(0.78 0.16 155 / 0.08);margin-bottom:24px;}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+.hero h1{font-size:clamp(32px,5vw,48px);font-weight:700;color:#fff;margin-bottom:14px;letter-spacing:-0.01em;}
+.hero p{font-size:17px;color:var(--muted);max-width:560px;margin:0 auto;}
+.hero p strong{color:var(--text);}
+.section-label{font-size:11px;font-weight:700;font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:48px 0 16px;}
+.steps{display:flex;flex-direction:column;gap:16px;}
+.step{display:flex;gap:24px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 28px;transition:border-color 0.2s ease;}
+.step:hover{border-color:oklch(0.76 0.17 200 / 0.3);}
+.step-num{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:oklch(0.76 0.17 200 / 0.1);border:1px solid oklch(0.76 0.17 200 / 0.3);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:14px;font-weight:700;color:var(--cyan);}
+.step-body{flex:1;}
+.step-body h3{font-size:17px;font-weight:600;color:#fff;margin-bottom:8px;}
+.step-body p{font-size:14px;color:var(--muted);margin-bottom:8px;}
+.step-body p:last-child{margin-bottom:0;}
+.step-body p strong{color:var(--text);}
+.step-body code{font-family:var(--mono);font-size:13px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:5px;padding:2px 7px;color:var(--cyan);}
+.step-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:9px 18px;border-radius:8px;font-family:var(--mono);letter-spacing:0.02em;transition:all 0.15s ease;cursor:pointer;}
+.btn-primary{background:var(--cyan);color:var(--bg);border:1px solid var(--cyan);}
+.btn-primary:hover{background:transparent;color:var(--cyan);text-decoration:none;}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border);}
+.btn-ghost:hover{border-color:var(--muted);color:#fff;text-decoration:none;}
+.notice{display:flex;gap:14px;background:oklch(0.85 0.18 55 / 0.06);border:1px solid oklch(0.85 0.18 55 / 0.3);border-radius:12px;padding:18px 22px;margin:24px 0;}
+.notice-icon{font-size:18px;flex-shrink:0;}
+.notice-body{font-size:14px;color:var(--muted);}
+.notice-body strong{color:#fff;}
+.warn-box{background:oklch(0.72 0.17 25 / 0.07);border:1px solid oklch(0.72 0.17 25 / 0.35);border-radius:12px;padding:24px 28px;margin:32px 0;}
+.warn-box .warn-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.warn-box .warn-icon{font-size:20px;}
+.warn-box .warn-title{font-size:13px;font-weight:700;font-family:var(--mono);letter-spacing:0.08em;text-transform:uppercase;color:var(--red);}
+.warn-box p{color:var(--muted);font-size:14px;margin:0;}
+.warn-box p + p{margin-top:8px;}
+.warn-box strong{color:#fff;}
+.resources{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px;}
+.resource{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;text-decoration:none;transition:all 0.15s ease;}
+.resource:hover{border-color:oklch(0.76 0.17 200 / 0.4);text-decoration:none;transform:translateY(-1px);}
+.resource-label{font-size:11px;font-family:var(--mono);letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);}
+.resource-title{font-size:15px;font-weight:600;color:#fff;}
+.resource-meta{font-size:12px;color:var(--muted);font-family:var(--mono);}
+details.faq{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:0;margin-bottom:10px;overflow:hidden;}
+details.faq summary{padding:16px 20px;cursor:pointer;font-size:14px;font-weight:500;color:var(--text);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:'+';font-family:var(--mono);font-size:18px;color:var(--muted);transition:transform 0.2s ease;}
+details.faq[open] summary::after{transform:rotate(45deg);}
+details.faq summary:hover{background:rgba(255,255,255,0.02);}
+details.faq .faq-body{padding:0 20px 18px;font-size:14px;color:var(--muted);border-top:1px solid var(--border);padding-top:14px;}
+details.faq .faq-body p{margin:0 0 8px;}
+details.faq .faq-body p:last-child{margin-bottom:0;}
+details.faq .faq-body code{font-family:var(--mono);font-size:13px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:5px;padding:2px 7px;color:var(--cyan);}
+.legal-strip{margin-top:48px;padding:24px;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;font-size:13px;color:var(--muted);text-align:center;}
+.legal-strip a{color:var(--muted);text-decoration:underline;text-decoration-color:rgba(255,255,255,0.2);}
+.legal-strip a:hover{color:var(--cyan);text-decoration-color:var(--cyan);}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+footer p{font-size:12px;color:var(--muted);font-family:var(--mono);}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-legal a{font-size:12px;color:var(--muted);text-decoration:none;font-family:var(--mono);}
+.footer-legal a:hover{color:var(--text);}
+@media (max-width:600px){
+  .step{flex-direction:column;gap:12px;padding:20px;}
+  .step-num{width:36px;height:36px;font-size:13px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="uploads/LogoNoText.png" alt="IOTSIM">
+    <span>IOTSIM</span>
+  </a>
+  <a href="index.html" class="nav-back">← Home</a>
+</nav>
+
+<div class="welcome-wrap">
+
+  <div class="hero">
+    <span class="hero-tag"><span class="hero-tag-dot"></span>Subscription Active</span>
+    <h1>Welcome to IOTSIM.</h1>
+    <p>Your <strong>14-day free trial</strong> has started. Access to the indicator is being provisioned to your TradingView account right now.</p>
+  </div>
+
+  <div class="notice">
+    <span class="notice-icon">⏱</span>
+    <div class="notice-body"><strong>Heads-up on timing.</strong> TradingView's servers can take a few minutes to register the invite. If IOTSIM doesn't appear in your <em>Invite-only Scripts</em> list immediately, that's normal — give it 5 minutes, refresh, and try again. The FAQ below covers what to do if it persists.</div>
+  </div>
+
+  <div class="section-label">Three steps to get started</div>
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>Open TradingView and find the indicator</h3>
+        <p>In TradingView, open any chart and click the <strong>Indicators</strong> button at the top of the screen. In the dialog that opens, switch to the <strong>Invite-only Scripts</strong> tab on the left.</p>
+        <p>You should see <code>IOTSIMICT</code> (or the edition you subscribed to) listed. Click it to add it to your chart.</p>
+        <div class="step-actions">
+          <a href="https://www.tradingview.com/chart/" target="_blank" rel="noopener" class="btn btn-primary">Open TradingView ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>Configure it to your preferences</h3>
+        <p>Open the indicator's settings (gear icon on the chart) and walk through the input groups. <strong>Default values are illustrative, not recommendations</strong> — they exist so the indicator runs out of the box, not as a strategy you should trade.</p>
+        <p>Spend time understanding each input. Match the configuration to your own analysis, your instrument, your timeframe, and your risk tolerance. The Insight Monitor will reflect the simulation results of whatever you've configured.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>Set your alerts (optional)</h3>
+        <p>If you want to be notified when your configured criteria align on the chart, enable the alert toggles in the <strong>System &amp; Alerts</strong> section, then create a TradingView alert in the usual way (right-click the chart → Add Alert → Condition: IOTSIM).</p>
+        <p>Alerts notify <strong>you</strong> when <strong>your</strong> criteria are met. They are not signals, recommendations, or instructions — see the Risk Disclaimer for the full position.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-label">Resources</div>
+
+  <div class="resources">
+    <a href="terms.html" class="resource">
+      <span class="resource-label">Legal</span>
+      <span class="resource-title">Terms &amp; Conditions</span>
+      <span class="resource-meta">The full agreement</span>
+    </a>
+    <a href="disclaimer.html" class="resource">
+      <span class="resource-label">Important</span>
+      <span class="resource-title">Risk Disclaimer</span>
+      <span class="resource-meta">Read before trading</span>
+    </a>
+    <a href="eula.html" class="resource">
+      <span class="resource-label">Licence</span>
+      <span class="resource-title">EULA</span>
+      <span class="resource-meta">Software licence terms</span>
+    </a>
+    <a href="returns.html" class="resource">
+      <span class="resource-label">Billing</span>
+      <span class="resource-title">Returns &amp; Cancellation</span>
+      <span class="resource-meta">How the trial works</span>
+    </a>
+  </div>
+
+  <div class="section-label">Common questions</div>
+
+  <details class="faq">
+    <summary>I can't see the indicator in my Invite-only Scripts list</summary>
+    <div class="faq-body">
+      <p>TradingView server propagation can take up to 10 minutes. Try this in order:</p>
+      <p>① Wait 5 minutes, refresh TradingView, and check the <strong>Invite-only Scripts</strong> tab again.<br>② If it's still missing, log out of TradingView and log back in.<br>③ Confirm in your <a href="https://whop.com/orders" target="_blank" rel="noopener">Whop dashboard</a> that you entered your TradingView username correctly (it's case-sensitive on some flows).<br>④ If 15+ minutes have passed and it's still not appearing, email <a href="mailto:support@iotsimalgo.com">support@iotsimalgo.com</a> with your Whop order ID and TradingView username.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>How does the 14-day free trial work?</summary>
+    <div class="faq-body">
+      <p>You have full access for 14 days. <strong>No payment is taken during the trial.</strong> If you cancel before the trial ends, you won't be charged at all.</p>
+      <p>If you don't cancel, your first paid billing period starts automatically at the end of the trial. From that point, fees are non-refundable — see the <a href="returns.html">Return &amp; Refund Policy</a> for the full position.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Where do I cancel if I decide IOTSIM isn't for me?</summary>
+    <div class="faq-body">
+      <p>Cancel via your <a href="https://whop.com/orders" target="_blank" rel="noopener">Whop dashboard</a>. Cancellation during the trial means no charge is ever made. Cancellation after the trial means your subscription continues until the end of the current billing period and then stops.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Can I use the indicator on more than one TradingView account?</summary>
+    <div class="faq-body">
+      <p>No — one TradingView account per subscription. This is set out in <a href="terms.html#s4">Section 4</a> of the Terms and is enforced by Whop's TradingView app. If you need to change which TradingView account is linked, contact <a href="mailto:support@iotsimalgo.com">support@iotsimalgo.com</a>.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Can I automate trades with IOTSIM alerts?</summary>
+    <div class="faq-body">
+      <p>For your <strong>own personal account only</strong>, yes — subject to all the conditions in <a href="terms.html#s6b">Section 6b</a> of the Terms. In short: it must be your own account, you must comply with your broker's terms and your local laws, and no alert or output can ever be exposed to anyone else.</p>
+      <p>Operating a signal service, copy-trading offering, or paid alerts channel based on IOTSIM outputs is <strong>strictly prohibited</strong> and grounds for immediate termination plus referral to TradingView, your broker, and the relevant regulator.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>I need help configuring the indicator</summary>
+    <div class="faq-body">
+      <p>Email <a href="mailto:support@iotsimalgo.com">support@iotsimalgo.com</a> with a description of what you're trying to achieve and a screenshot of your current settings. We can help you understand what each input does, but we cannot tell you which settings to use — that's your call as a self-directed user.</p>
+    </div>
+  </details>
+
+  <div class="warn-box">
+    <div class="warn-head">
+      <span class="warn-icon">⚠️</span>
+      <span class="warn-title">Before You Trade Live</span>
+    </div>
+    <p>IOTSIM is a research, analysis, and self-configured monitoring tool. It does not provide financial advice, signals, or recommendations. <strong>Every output is the result of inputs you have selected.</strong> Past simulated performance does not indicate future results. All trading involves substantial risk of loss, including total loss of capital.</p>
+    <p>You are solely responsible for your trading decisions. Read the <a href="disclaimer.html">Risk Disclaimer</a> in full before placing any live trade.</p>
+  </div>
+
+  <div class="legal-strip">
+    By using IOTSIM you agree to the <a href="terms.html">Terms &amp; Conditions</a>, <a href="eula.html">EULA</a>, <a href="privacy.html">Privacy Policy</a>, <a href="returns.html">Return &amp; Refund Policy</a>, and <a href="disclaimer.html">Risk Disclaimer</a>.
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Reggie_W, trading as IOTSIM — iotsimalgo.com</p>
+  <div class="footer-legal">
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="eula.html">EULA</a>
+    <a href="returns.html">Returns</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -40,7 +40,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:16px 3
 .placeholder{background:oklch(0.85 0.18 55 / 0.08);border:1px dashed oklch(0.85 0.18 55 / 0.4);border-radius:6px;padding:2px 8px;color:oklch(0.85 0.18 55);font-family:var(--mono);font-size:13px;}
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 footer p{font-size:12px;color:var(--muted);font-family:var(--mono);}
-.footer-legal{display:flex;gap:20px;}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap;}
 .footer-legal a{font-size:12px;color:var(--muted);text-decoration:none;font-family:var(--mono);}
 .footer-legal a:hover{color:var(--text);}
 </style>
@@ -59,7 +59,7 @@ footer p{font-size:12px;color:var(--muted);font-family:var(--mono);}
   <div class="legal-header">
     <span class="legal-tag">⚠ Risk Disclaimer</span>
     <h1>Risk Disclaimer</h1>
-    <p class="meta">Last updated: April 2026 &nbsp;·&nbsp; Please read carefully before subscribing</p>
+    <p class="meta">Last updated: May 2026 &nbsp;·&nbsp; Please read carefully before subscribing</p>
   </div>
 
   <div class="legal-body">
@@ -69,21 +69,26 @@ footer p{font-size:12px;color:var(--muted);font-family:var(--mono);}
         <span class="warn-icon">⚠️</span>
         <span class="warn-title">Important — Read Before Using IOTSIM</span>
       </div>
-      <p>Trading financial instruments including but not limited to futures, forex, equities, commodities, and derivatives involves a <strong style="color:var(--red);">substantial risk of loss</strong> and is not suitable for all individuals. You may lose more than your initial investment.</p>
-      <p>IOTSIM is a <strong style="color:#fff;">research and simulation tool only</strong>. It does not provide financial advice, trading signals, or investment recommendations of any kind.</p>
+      <p>Trading financial instruments — including but not limited to futures, forex, equities, commodities, cryptocurrencies, and derivatives — involves a <strong style="color:var(--red);">substantial risk of loss</strong> and is not suitable for all individuals. You may lose more than your initial investment. In leveraged products, losses can exceed your deposited capital.</p>
+      <p>IOTSIM is a <strong style="color:#fff;">self-configured research, simulation, and monitoring tool only</strong>. It does not generate, transmit, or recommend trades. It does not provide financial advice, investment advice, signals, or recommendations of any kind. Every output it produces is the deterministic result of inputs you have selected.</p>
     </div>
 
     <h2>1. Not Financial Advice</h2>
-    <p>Nothing produced, displayed, or communicated by IOTSIM — including simulated trade outcomes, Insight Monitor statistics, Profit Factor figures, Win Rates, or any other metric — constitutes financial advice, investment advice, trading recommendations, or any form of regulated financial service.</p>
-    <p>All outputs are the result of applying user-defined hypothetical rules to historical price data. They are analytical in nature and intended solely as a research aid.</p>
+    <p>Nothing produced, displayed, or communicated by IOTSIM — including simulated trade outcomes, Insight Monitor statistics, Profit Factor figures, Win Rates, alerts, screenshots, or any other metric — constitutes financial advice, investment advice, trading recommendations, a solicitation, an offer, or any form of regulated financial service.</p>
+    <p>All outputs are the result of applying user-defined hypothetical rules to historical price data, or of monitoring live price action against criteria you have configured yourself. They are analytical in nature and intended solely as a research aid for self-directed users.</p>
 
-    <h2>2. Past Performance</h2>
+    <h2>2. Alerts Are Notifications, Not Instructions</h2>
+    <p>IOTSIM's alert and detection features exist solely to notify <strong>you</strong> when price action on your chart aligns with technical criteria <strong>you have configured yourself</strong>. An alert is a notification that <em>your</em> criteria have been met. It is not a recommendation, instruction, signal, prediction, or suggestion that you should take any action — including entering, exiting, sizing, hedging, or managing a trade.</p>
+    <p>Labels used within the Product such as <strong>"Entry," "Stop Loss," "Take Profit," "TP1 Hit," "TSL Update," "Detected," "Setup," "Trade," "Long,"</strong> and <strong>"Short"</strong> are technical descriptors referring to points and states within a user-defined simulation model. They do not constitute instructions to enter, exit, or manage any position in a live market.</p>
+    <p>Default input values, example configurations, tutorial content, marketing material, and screenshots are provided for <strong>illustrative and educational purposes only</strong>. They are not recommended settings, optimal settings, or settings we suggest you trade.</p>
+
+    <h2>3. Past Performance</h2>
     <div class="warn-box">
       <p><strong style="color:#fff;">Past simulated performance is not indicative of future results.</strong></p>
       <p>Backtest and simulation results presented within IOTSIM are based on historical data. Historical data cannot account for future market conditions, regime changes, liquidity shifts, volatility changes, or structural market evolution. A configuration that produced a profitable Profit Factor over a historical lookback period provides no guarantee of profitability in live trading conditions.</p>
     </div>
 
-    <h2>3. Hypothetical Performance Disclaimer</h2>
+    <h2>4. Hypothetical Performance Disclaimer</h2>
     <p>All trade simulations within IOTSIM are <strong>hypothetical</strong>. Hypothetical performance results have many inherent limitations:</p>
     <ul>
       <li>They are prepared with the benefit of hindsight</li>
@@ -91,10 +96,11 @@ footer p{font-size:12px;color:var(--muted);font-family:var(--mono);}
       <li>They assume ideal order execution at the simulated entry price, which may not be achievable in live markets</li>
       <li>They do not reflect the psychological pressures of live trading</li>
       <li>They do not account for the impact of your own trading activity on market prices</li>
+      <li>They cannot account for repainting, missed bars, or platform behaviour during live conditions</li>
     </ul>
     <p>No representation is made that any account will or is likely to achieve profits or losses similar to those shown in simulated results.</p>
 
-    <h2>4. Your Responsibility</h2>
+    <h2>5. Your Responsibility</h2>
     <p>You are solely and exclusively responsible for:</p>
     <ul>
       <li>All trading decisions made in connection with or independent of your use of IOTSIM</li>
@@ -102,45 +108,66 @@ footer p{font-size:12px;color:var(--muted);font-family:var(--mono);}
       <li>Applying appropriate risk management to any live trading activity</li>
       <li>Ensuring that trading is legal and appropriate in your jurisdiction</li>
       <li>Understanding the products you trade and their associated risks</li>
+      <li>Complying with the terms of service of your broker, exchange, and any platform you use</li>
+      <li>Reporting and paying tax on any trading activity in accordance with your local law</li>
     </ul>
 
-    <h2>5. Not a Regulated Product</h2>
-    <p>IOTSIM is a software tool — a TradingView indicator. It is not a regulated financial product, managed account, fund, or investment vehicle. IOTSIM is not a regulated financial adviser, broker, or investment manager in any jurisdiction.</p>
+    <h2>6. Personal Automation Is At Your Own Risk</h2>
+    <p>If you choose to connect IOTSIM alerts to automated execution on your own personal trading account (which is permitted under <a href="terms.html">Section 6b of the Terms</a>), you assume full responsibility for the automation, including any execution, mis-execution, slippage, downtime, malformed order, runaway behaviour, or financial loss arising from it — irrespective of cause.</p>
+    <p>Latency, missed bars, repainting on unconfirmed bars, TradingView platform behaviour, broker API behaviour, and network conditions are <strong>outside our control</strong>. We provide no warranty, support, or guarantee regarding the suitability of IOTSIM alerts for automated execution.</p>
+
+    <h2>7. Redistribution and Resale Are Prohibited</h2>
+    <div class="warn-box">
+      <div class="warn-head">
+        <span class="warn-icon">⛔</span>
+        <span class="warn-title">No Signal Services · No Resale · No Mentorship</span>
+      </div>
+      <p>IOTSIM is licensed for your <strong style="color:#fff;">own private research and personal trading only</strong>. You may not represent, market, redistribute, resell, or hold out IOTSIM outputs — including alerts, simulated results, statistical summaries, screenshots, or recordings — as trading signals, investment recommendations, managed-account services, or guaranteed results, whether for a fee or free of charge, and whether to the public, to followers, or to clients.</p>
+      <p>This includes but is not limited to operating Discord groups, Telegram channels, paid newsletters, signal rooms, "VIP" channels, mentorship programmes, or social-media offerings that derive their value, in whole or in part, from rebroadcasting, mirroring, paraphrasing, or otherwise communicating IOTSIM outputs to other persons.</p>
+      <p>Breach is a material breach of the Terms and authorises us to terminate your subscription without refund, report you to TradingView, Whop, your broker, and any competent regulator (including, in the UK, the FCA and Action Fraud), and pursue civil and, where applicable, criminal remedies. <strong style="color:#fff;">Operating an unauthorised investment-advice or signal service may also be a criminal offence in your jurisdiction</strong> — in the UK, this may engage Sections 19 and 21 of the Financial Services and Markets Act 2000.</p>
+    </div>
+
+    <h2>8. Not a Regulated Product</h2>
+    <p>IOTSIM is a software tool — a TradingView indicator. It is not a regulated financial product, managed account, fund, or investment vehicle. Reggie_W, trading as IOTSIM, is not a regulated financial adviser, broker, or investment manager in any jurisdiction.</p>
     <p>If you require regulated financial advice, please consult a qualified and authorised financial adviser in your jurisdiction.</p>
 
-    <h2>6. Market Risk Factors</h2>
+    <h2>9. Market Risk Factors</h2>
     <p>Trading carries exposure to a broad range of risks including but not limited to:</p>
     <ul>
       <li>Market risk — prices can move against your position rapidly and without warning</li>
       <li>Liquidity risk — you may be unable to exit a position at a desired price</li>
-      <li>Leverage risk — leveraged products can magnify both gains and losses</li>
-      <li>Technology risk — platform outages, internet failure, or software errors may prevent order execution</li>
+      <li>Leverage risk — leveraged products can magnify both gains and losses, and may lead to losses exceeding deposited capital</li>
+      <li>Technology risk — platform outages, internet failure, broker API issues, or software errors may prevent order execution</li>
       <li>Regulatory risk — rules governing trading may change and affect your ability to trade</li>
+      <li>Counterparty risk — your broker, exchange, or platform may fail or impose unexpected restrictions</li>
       <li>Black swan events — unexpected market events can cause losses far beyond historical norms</li>
     </ul>
 
-    <h2>7. No Liability</h2>
-    <p>To the maximum extent permitted by applicable law, IOTSIM accepts no liability for any financial loss, trading loss, indirect loss, or consequential damage arising from your use of the Product or reliance upon any information or statistics it produces.</p>
+    <h2>10. No Liability</h2>
+    <p>To the maximum extent permitted by applicable law, Reggie_W, trading as IOTSIM, accepts no liability for any financial loss, trading loss, indirect loss, consequential damage, regulatory penalty, or reputational harm arising from your use of the Product or reliance upon any information, output, alert, or statistic it produces. The full limitation of liability is set out in <a href="terms.html">Section 8 of the Terms</a>.</p>
+    <p>Nothing in this Disclaimer excludes or limits our liability for: (i) death or personal injury caused by our negligence; (ii) fraud or fraudulent misrepresentation; or (iii) any other liability that cannot be excluded or limited under the laws of England &amp; Wales. If you are a consumer ordinarily resident in the United Kingdom or the European Economic Area, nothing in this Disclaimer affects your non-excludable statutory rights.</p>
 
-    <h2>8. Seek Professional Advice</h2>
+    <h2>11. Seek Professional Advice</h2>
     <div class="neutral-box">
       <p>Before engaging in live trading, we strongly encourage you to:</p>
-      <p style="margin-top:10px;">① Consult a qualified financial adviser &nbsp;·&nbsp; ② Paper-trade extensively before risking real capital &nbsp;·&nbsp; ③ Only risk capital you can afford to lose entirely &nbsp;·&nbsp; ④ Understand the leverage and margin requirements of any product you trade</p>
+      <p style="margin-top:10px;">① Consult a qualified financial adviser &nbsp;·&nbsp; ② Paper-trade extensively before risking real capital &nbsp;·&nbsp; ③ Only risk capital you can afford to lose entirely &nbsp;·&nbsp; ④ Understand the leverage and margin requirements of any product you trade &nbsp;·&nbsp; ⑤ Confirm that the products and platforms you intend to use are legal and authorised in your jurisdiction</p>
     </div>
 
-    <h2>9. Jurisdictional Notice</h2>
-    <p>This disclaimer is provided for informational purposes and is not exhaustive. Laws and regulations governing trading and financial products vary by jurisdiction. It is your responsibility to ensure compliance with all applicable laws in your country of residence.</p>
-
+    <h2>12. Jurisdictional Notice</h2>
+    <p>This disclaimer is provided for informational purposes and is not exhaustive. Laws and regulations governing trading and financial products vary by jurisdiction. It is your responsibility to ensure compliance with all applicable laws in your country of residence and any country in which you trade.</p>
+    <p>This Disclaimer should be read together with the <a href="terms.html">Terms &amp; Conditions</a> and the <a href="privacy.html">Privacy Policy</a>. In the event of any conflict between this Disclaimer and the Terms, the Terms prevail.</p>
 
   </div>
 </div>
 
 <footer>
-  <p>© 2026 IOTSIM / Reggie_W — iotsimalgo.com</p>
+  <p>© 2026 Reggie_W, trading as IOTSIM — iotsimalgo.com</p>
   <div class="footer-legal">
     <a href="terms.html">Terms</a>
     <a href="privacy.html">Privacy</a>
     <a href="disclaimer.html">Disclaimer</a>
+    <a href="eula.html">EULA</a>
+    <a href="returns.html">Returns</a>
   </div>
 </footer>
 </body>
