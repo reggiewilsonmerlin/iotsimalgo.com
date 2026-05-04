@@ -28,11 +28,6 @@
   --mono:      'Space Mono', monospace;
   --r:         10px;
   --r-lg:      16px;
-
-  /* tweakable */
-  --cta-url: "https://whop.com/iotsim/";
-  --price-basic: "£29";
-  --price-pro: "£59";
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -176,7 +171,6 @@ nav {
   );
 }
 
-/* Animated grid lines */
 .hero-grid {
   position: absolute; inset: 0; pointer-events: none;
   background-image:
@@ -742,18 +736,6 @@ footer {
     <span class="marquee-item"><span>⬤</span> Trailing Stop Logic</span>
     <span class="marquee-item"><span>⬤</span> Discord Alert Webhooks</span>
     <span class="marquee-item"><span>⬤</span> Breaker Block Detection</span>
-    <span class="marquee-item"><span>⬤</span> Fair Value Gap Detection</span>
-    <span class="marquee-item"><span>⬤</span> Order Block Simulation</span>
-    <span class="marquee-item"><span>⬤</span> ICT Killzones &amp; Macros</span>
-    <span class="marquee-item"><span>⬤</span> Profit Factor Analysis</span>
-    <span class="marquee-item"><span>⬤</span> Day &amp; Hour Analytics</span>
-    <span class="marquee-item"><span>⬤</span> PD Array Matrix</span>
-    <span class="marquee-item"><span>⬤</span> HTF Scout Overlay</span>
-    <span class="marquee-item"><span>⬤</span> Model Leaderboard</span>
-    <span class="marquee-item"><span>⬤</span> 3-Level Partials</span>
-    <span class="marquee-item"><span>⬤</span> Trailing Stop Logic</span>
-    <span class="marquee-item"><span>⬤</span> Discord Alert Webhooks</span>
-    <span class="marquee-item"><span>⬤</span> Breaker Block Detection</span>
   </div>
 </div>
 
@@ -1221,16 +1203,16 @@ footer {
     <input type="text" id="tw-basic" placeholder="$299">
   </div>
   <div class="tweak-row">
-    <label>Pro Plan Price (e.g. £59)</label>
-    <input type="text" id="tw-pro" placeholder="£59">
+    <label>Pro Plan Price</label>
+    <input type="text" id="tw-pro" placeholder="$399">
   </div>
   <div class="tweak-row">
     <label>Standard Plan Label</label>
-    <input type="text" id="tw-basic-label" placeholder="Standard">
+    <input type="text" id="tw-basic-label" placeholder="Founding Annual">
   </div>
   <div class="tweak-row">
     <label>Pro Plan Label</label>
-    <input type="text" id="tw-pro-label" placeholder="Pro">
+    <input type="text" id="tw-pro-label" placeholder="Early Adopter Annual">
   </div>
   <button class="tweak-apply" onclick="applyTweaks()">Apply Changes</button>
 </div>
@@ -1250,10 +1232,12 @@ let tweaks = Object.assign({}, TWEAK_DEFAULTS);
 function applyTweakValues(t) {
   const url = t.whopUrl || TWEAK_DEFAULTS.whopUrl;
   document.querySelectorAll('[id$="-cta"]').forEach(el => el.href = url);
-  const basicAmt = document.querySelector('.price-card:not(.featured) .price-amount');
-  const proAmt   = document.querySelector('.price-card.featured .price-amount');
-  if (basicAmt) basicAmt.innerHTML = (t.priceBasic||'£29').replace(/[£$€]/g, m=>`<sup>${m}</sup>`).replace(/(\d+)/, '$1');
-  if (proAmt)   proAmt.innerHTML   = (t.pricePro||'£59').replace(/[£$€]/g, m=>`<sup>${m}</sup>`).replace(/(\d+)/, '$1');
+  
+  const foundingAmt = document.querySelector('.pricing-limited-grid .price-card.featured .price-amount');
+  const earlyAdopterAmt = document.querySelector('.pricing-limited-grid .price-card:not(.featured) .price-amount');
+  
+  if (foundingAmt) foundingAmt.innerHTML = (t.priceBasic||'$299').replace(/([$£€])/g, m=>`<sup>${m}</sup>`).replace(/(\d+)/, '$1');
+  if (earlyAdopterAmt) earlyAdopterAmt.innerHTML = (t.pricePro||'$399').replace(/([$£€])/g, m=>`<sup>${m}</sup>`).replace(/(\d+)/, '$1');
 }
 
 applyTweakValues(tweaks);
@@ -1295,13 +1279,5 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
-
-<template id="__bundler_thumbnail">
-<svg viewBox="0 0 80 56" xmlns="http://www.w3.org/2000/svg">
-  <rect width="80" height="56" fill="#050a0f"/>
-  <text x="40" y="30" text-anchor="middle" fill="#4dd9ff" font-size="14" font-family="monospace" font-weight="bold">IOTSIM</text>
-  <text x="40" y="44" text-anchor="middle" fill="#3a5a70" font-size="6" font-family="monospace">∞ TRADE SIMULATOR</text>
-</svg>
-</template>
 </body>
 </html>
